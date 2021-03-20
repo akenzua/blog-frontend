@@ -19,16 +19,21 @@
 
 <script>
 import logInUser from '../../composables/logInUser';
+// import { useRouter } from 'vue-router';
+// import { useStore } from 'vuex';
 
 export default {
     name: '`LoginForm',
     setup(){
+
+    //   const router = useRouter();
+      
       const { handleSubmit, formData } = logInUser();
     
-      const onSubmit = () => {
-        handleSubmit();
+      const onSubmit = async () => {
+        await handleSubmit();
       }
-      
+   
    
       return{
        formData, onSubmit
