@@ -1,7 +1,5 @@
 <template>
-  <div>
-      Comment Section
-     
+  <div>    
       <CommentForm :id="id" />
       <CommentDetails :comment="comment" />
         
