@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=New+Tegomin&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@layer components {
+    .auth-input{
+        @apply bg-yellow-300 w-full my-3 h-10 px-4  placeholder-yellow-800 placeholder-opacity-40 text-gray-600;
+    }
+    .auth-button{
+        @apply bg-yellow-300 w-full my-3 h-10 px-4 text-gray-800 font-headings font-black;
+    }
+    .auth-form-div{
+        @apply grid grid-rows-6 grid-flow-col gap-0 md:grid-cols-3 py-5 mb-10;
+    }
+    .auth-form{
+        @apply w-full px-2 row-start-2 col-start-2;
+    }
+}
