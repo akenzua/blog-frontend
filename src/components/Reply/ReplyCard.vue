@@ -1,8 +1,8 @@
 <template>
   <div> 
-     <ReplyDetails  />
-     <span @click="visible = !visible">Reply</span>
-     <ReplyForm  v-if="visible"/>   
+     <ReplyDetails :reply="reply" />
+     <div @click="visible = !visible" class="text-xs my-6 font-extralight">Reply</div>
+     <ReplyForm  v-if="visible" :comment="comment" :blog="blog"/>   
   </div>
 </template>
 
@@ -11,6 +11,7 @@ import ReplyDetails from "./ReplyDetails.vue";
 import ReplyForm from "./ReplyForm.vue"
 
 export default {
+    props:['comment', 'blog', 'reply'],
     data: () => {
         return{
              visible: false
@@ -19,6 +20,12 @@ export default {
     components: {
         ReplyForm,
         ReplyDetails
+    },
+    setup(){
+        // console.log(props)
+        return{
+
+        }
     }
 
 }
