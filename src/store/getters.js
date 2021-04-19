@@ -11,5 +11,13 @@ export const getBlogs = (state) => {
 }
 
 export const getComments = () => {
-    return state.blog[0].comment;
+    return state.comments;
+}
+
+export const getOpen = () => {
+    return state.isOpen
+}
+
+export const getLogIn = () => {
+    return state.isLoggedIn
 }

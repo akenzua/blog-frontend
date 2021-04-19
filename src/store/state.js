@@ -1,6 +1,9 @@
 export default {
     user: [],
     blogs: [],
-    blog: [],
-    loading: ''
+    blog: [],   
+    comments: [],
+    loading: '',
+    isOpen: false,
+    isLoggedIn: false
 }

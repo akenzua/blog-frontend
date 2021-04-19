@@ -17,7 +17,36 @@ export const LOADING = (state, newLoadingState) => {
 }
 export const UPDATE_COMMENT = (state, comment) => {
    
-    state.blog[0].comment.unshift(comment.comment)
+    state.comments.unshift(comment.comment)
    
+}
+
+export const OPEN_MENU = (state) => {
+    state.isOpen = !state.isOpen;
+}
+
+export const COMPUTED_COMMENT = (state, comment) => {
+    state.comments = comment
+}
+
+export const UPDATE_REPLY = (state, reply) => {
+
+    let comments = state.comments;
+    console.log(reply.comment_id)
+    comments.filter((comment) => {
+        if(comment.id === reply.comment_id){
+            if("reply"in comment){
+                return comment["reply"].push(reply)
+            }
+            comment["reply"] = [reply]
+        }
+        return comment
+    })
+
+}
+
+export const IS_LOGGED_IN = (state, login) => {
+    state.isLoggedIn = login
+    console.log(login)
 }
 
