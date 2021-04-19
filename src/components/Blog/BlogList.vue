@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h4>Blog List</h4>
+   
     <div  v-if="blogs" >
         <div v-for="blog in returnedBlogs" :key="blog.id">
             <BlogCard  :blog="blog" />

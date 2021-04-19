@@ -1,16 +1,17 @@
 <template>
-    <div>
-       
-      
+<div class="md:grid md:grid-cols-10 md:gap-4">
+     <div class="md:col-span-6">
         <div v-if="blog">
-             <h2> {{blog.title}}</h2>
-        <div v-for="paragraph in blog.paragrapgh" :key="paragraph.id">
-            <p>{{ paragraph.content }}</p>
-        </div>
-        <h5>Comments</h5>
-        <CommentCard :comment='comment' :id="blog.id" />
+             <h2 class="text-2xl font-black font-headings my-10"> {{blog.title}}</h2>
+            <div class="text-sm" v-for="paragraph in blog.paragrapgh" :key="paragraph.id">
+                <p class="font-body font-light my-7">{{ paragraph.content }}</p>
+            </div>
+            <h5 class="font-body text-base font-light">Comments</h5>
+            <CommentCard :comment='comment' :id="blog.id" />
         </div>
     </div>
+</div>
+   
   
 </template>
 
