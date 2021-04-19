@@ -1,26 +1,20 @@
 <template>
-  <form @submit.prevent="onSubmit">
-      <fieldset>
-          <legend>Sign In</legend>
-          <div>
-            <label>Email</label>
-            <input type="email"  v-model="formData.email" placeholder="Email">
-          </div>
-          <div>
-            <label>Password</label>
-            <input type="password" v-model="formData.password" placeholder="Password">
-          </div>
-          
-
-      </fieldset>
-      <button>Sign In</button>
+<div class="home auth-form-div">
+   <form @submit.prevent="onSubmit" class="auth-form">
+         
+            <input type="email" class="auth-input" v-model="formData.email" placeholder="email">
+        
+            <input type="password" class="auth-input" v-model="formData.password" placeholder="password">
+       
+      <button class="auth-button">Sign In</button>
   </form>
+</div>
+ 
 </template>
 
 <script>
 import logInUser from '../../composables/logInUser';
-// import { useRouter } from 'vue-router';
-// import { useStore } from 'vuex';
+
 
 export default {
     name: '`LoginForm',
@@ -32,6 +26,7 @@ export default {
     
       const onSubmit = async () => {
         await handleSubmit();
+         
       }
    
    
